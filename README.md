@@ -84,3 +84,31 @@ Definida a entidade, precisamos criar um repositório que será utilizado para int
 
     Além da facilidade em definir apenas uma assinatura, o nome dessa assinatura interefe diretamente no que a implementação irá fazer, no nosso caso, será criada uma implementação que fara uma busca por títulos e devolverá uma lista.
 
+Após a entidade e o repositório serem criados, é preciso colocar mais duas anotações na classe principal (Application.class):
+
+* @EnableJpaRepositories: busca por repositórios no pacote especificado
+* @EntityScan: busca por entidades no pacote especificado
+
+## Rest Controllers
+
+Diferentemente da anotação @Controller, que devolve uma View, temos outras anotações para auxiliar no uso de chamadas REST:
+
+* @RestController: serializa o retorno e o transforma para a resposta de uma chamada REST
+* @RequestMapping: define paths para a classe como um todo
+* @PostMapping: cria um mapeamento para requisições do tipo post
+* @DeleteMapping: cria um mapeamento para requisições do tipo delete
+* @PutMapping: cria um mapeamento para requisições do tipo put
+* @ResponseStatus: define o http status code que será retornado na resposta da requisição
+* @PathVariable: recupera o valor de uma path variable passada na URL
+* @RequestBody: deserializa o conteúdo do body de uma requisição em uma classe
+
+## Error Handling
+
+Para o tratamento de erros da aplicação, utilizamos de um Exception Handler, que no nosso caso extende de um ResponseEntityExceptionHandler, que já provê alguns métodos default.
+
+O uso de algumas anotações se faz necessário para tratarmos os erros da aplicação:
+
+* @ControllerAdvice: facilita a captura e o retorno de respostas em caso de erro na aplicação, serializando objeto junto do http status code
+* @ExceptionHandler: facilita a captura das exceções lançadas, como se fosse um try/catch final, evitando que a exceção estoure para o usuário na tela
+
+> Este conteúdo foi gerado a partir do tutorial disponível em https://www.baeldung.com/spring-boot-start
