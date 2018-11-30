@@ -113,13 +113,13 @@ O uso de algumas anotações se faz necessário para tratarmos os erros da aplicaçã
 
 ## Executando a aplicação
 
-`./gradlew bootRun
+`./gradlew bootRun`
 
-`GET: /api/books
+`GET: /api/books`
 
-`GET: /api/books/title/{bookTitle}
+`GET: /api/books/title/{bookTitle}`
 
-`GET: /api/books/{id}
+`GET: /api/books/{id}`
 
 `POST: /api/books
  BODY:
@@ -127,8 +127,9 @@ O uso de algumas anotações se faz necessário para tratarmos os erros da aplicaçã
         "title":string,
         "author":string
     }
+`
 
-`DELETE: /api/books/{id}
+`DELETE: /api/books/{id}`
 
 `PUT: /api/books/{id}
  BODY:
@@ -136,5 +137,6 @@ O uso de algumas anotações se faz necessário para tratarmos os erros da aplicaçã
         "title":string,
         "author":string
     }
+`
 
 > Este conteúdo foi gerado a partir do tutorial disponível em https://www.baeldung.com/spring-boot-start
