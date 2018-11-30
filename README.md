@@ -111,4 +111,30 @@ O uso de algumas anotações se faz necessário para tratarmos os erros da aplicaçã
 * @ControllerAdvice: facilita a captura e o retorno de respostas em caso de erro na aplicação, serializando objeto junto do http status code
 * @ExceptionHandler: facilita a captura das exceções lançadas, como se fosse um try/catch final, evitando que a exceção estoure para o usuário na tela
 
+## Executando a aplicação
+
+`./gradlew bootRun
+
+`GET: /api/books
+
+`GET: /api/books/title/{bookTitle}
+
+`GET: /api/books/{id}
+
+`POST: /api/books
+ BODY:
+    {
+        "title":string,
+        "author":string
+    }
+
+`DELETE: /api/books/{id}
+
+`PUT: /api/books/{id}
+ BODY:
+    {
+        "title":string,
+        "author":string
+    }
+
 > Este conteúdo foi gerado a partir do tutorial disponível em https://www.baeldung.com/spring-boot-start
